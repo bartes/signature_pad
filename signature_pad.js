@@ -48,6 +48,7 @@ var SignaturePad = (function (document) {
         this.backgroundColor = opts.backgroundColor || "rgba(0,0,0,0)";
         this.onEnd = opts.onEnd;
         this.onBegin = opts.onBegin;
+        this.onUpdate = opts.onUpdate;
 
         this._canvas = canvas;
         this._ctx = canvas.getContext("2d");
@@ -133,6 +134,9 @@ var SignaturePad = (function (document) {
     SignaturePad.prototype._strokeUpdate = function (event) {
         var point = this._createPoint(event);
         this._addPoint(point);
+        if (typeof this.onUpdate === 'function') {
+            this.onUpdate(event);
+        }
     };
 
     SignaturePad.prototype._strokeBegin = function (event) {
