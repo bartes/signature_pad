@@ -116,10 +116,10 @@ var SignaturePad = (function (document) {
         return canvas.toDataURL.apply(canvas, arguments);
     };
 
-    SignaturePad.prototype.fromDataURL = function (dataUrl) {
+    SignaturePad.prototype.fromDataURL = function (dataUrl, userRatio) {
         var self = this,
             image = new Image(),
-            ratio = window.devicePixelRatio || 1,
+            ratio = userRatio || window.devicePixelRatio || 1,
             width = this._canvas.width / ratio,
             height = this._canvas.height / ratio;
 
