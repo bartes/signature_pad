@@ -135,7 +135,7 @@ var SignaturePad = (function (document) {
         var point = this._createPoint(event);
         this._addPoint(point);
         if (typeof this.onUpdate === 'function') {
-            this.onUpdate(event);
+            this.onUpdate(event, point);
         }
     };
 
