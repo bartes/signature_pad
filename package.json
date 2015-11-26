@@ -2,7 +2,7 @@
   "name": "signature_pad",
   "description": "Library for drawing smooth signatures.",
   "version": "1.5.2",
-  "homepage": "https://github.com/szimek/signature_pad",
+  "homepage": "https://github.com/bartes/signature_pad",
   "author": {
     "name": "Szymon Nowak",
     "email": "szimek@gmail.com",
