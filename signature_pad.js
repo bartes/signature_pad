@@ -167,7 +167,7 @@ var SignaturePad = (function (document) {
             this._strokeDraw(point);
         }
         if (typeof this.onEnd === 'function') {
-            this.onEnd(event);
+            this.onEnd(event, point);
         }
     };
 
